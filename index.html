@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/swiper-4.1.6.min.css">
+    <link rel="stylesheet" href="./css/index.css">
+    <script src="./js/jquery.min.js"></script>
+    <script src="./js/swiper-4.1.6.min.js"></script>
+</head>
+<body>
+<div class="top" style="background-image: url('./img/logo.png')">
+    <div class="nav">
+        <a href="">联盟</a>
+        <a href="">动态</a>
+        <a href="">行动</a>
+        <a href="">队伍</a>
+        <a href="">联系</a>
+    </div>
+    <div class="nav_icons">
+        <span><img src="./img/icon_f1.png" alt=""></span>
+        <span><img src="./img/icon_f2.png" alt=""></span>
+        <span><img src="./img/icon_f3.png" alt=""></span>
+    </div>
+</div>
+<div class="swiper-container" id="swiper1">
+    <div class="swiper-wrapper">
+        <div class="swiper-slide">
+            <img src="./img/banner.jpg" width="100%" alt="">
+        </div>
+        <div class="swiper-slide">
+            <img src="./img/banner.jpg" width="100%" alt="">
+        </div>
+        <div class="swiper-slide">
+            <img src="./img/banner.jpg" width="100%" alt="">
+        </div>
+    </div>
+    <div class="swiper-pagination"></div>
+</div>
+
+<!--news sta-->
+<div class="news">
+    <div class="news_out">
+        <div class="news_items"></div>
+        <div class="news_items"></div>
+        <div class="news_items"></div>
+    </div>
+</div>
+<!--news end-->
+
+<!--xingdong sta-->
+<div class="xing">
+    <div class="dong">
+        <div class="xing_out">
+            <div class="xing_items"></div>
+            <div class="xing_items"></div>
+            <div class="xing_items"></div>
+            <div class="xing_items"></div>
+        </div>
+    </div>
+</div>
+<!--xingdong end-->
+
+<!--video sta-->
+<div class="vid">
+    <div class="vid_items"></div>
+    <div class="vid_items"></div>
+</div>
+<!--video end-->
+</body>
+<script>
+    $(function () {
+        var mySwiper = new Swiper('#swiper1', {
+            autoplay: true,//可选选项，自动滑动
+            grabCursor : true,//手掌
+            speed:300,//滑动到结束速度
+            loop : true,//环路
+            pagination: {
+                el: '.swiper-pagination',//分页
+                clickable :true,//分页互相控制
+            },
+        });
+        if(mySwiper.slides.length<=3){
+            mySwiper.destroy();
+        }
+    });
+</script>
+</html>
