@@ -4,13 +4,13 @@ h1, h2, h3, h4, h5, h6{ font-size:100%; }
 address, cite, dfn, em, var { font-style:normal; }
 code, kbd, pre, samp { font-family:couriernew, courier, monospace; }
 small{ font-size:12px; }
-ul, ol { list-style:none; }
+ul, ol { list-style:none;}
 a { text-decoration:none; }
 a:hover { text-decoration:none; }
 img { border:0; }
 button, input, select, textarea { font-size:100%; }
-*{margin:0;padding: 0;}
 img{vertical-align:middle;}
+*{margin:0;padding: 0;}
 .swiper-container {
     width: 100%;
     height: 100%;
@@ -299,4 +299,317 @@ img{vertical-align:middle;}
 .banner{
     padding-top: 120px;
 }
+.menu{
+    width: 1200px;
+    margin: 0 auto 40px;
+    overflow: hidden;
+}
+.menu_heard{
+    width: 100%;
+    height: 80px;
+    border-bottom: 2px solid #eee;
+}
+.menu_left{
+    width: 600px;
+    float: left;
+}
+.menu_right{
+    float: right;
+    line-height: 80px;
+    font-size: 14px;
+}
+.menu_right>a{
+    color: black;
+}
+.menu_right>span:last-of-type{
+    color: #c79744;
+}
+.menu_left>a{
+    display: inline-block;
+    height: 80px;
+    font-size: 24px;
+    color: black;
+    line-height: 80px;
+    margin-right: 30px;
+}
+.mune_active{
+    border-bottom: 2px solid #c79744;
+}
+.menu_content{
+    width: 100%;
+    overflow: hidden;
+    border-bottom: 2px solid #c79744;
+}
+.menu_content>ul{
+    width: 100%;
+    margin-top: 40px;
+}
+.menu_items{
+    width: 50%;
+    height: 240px;
+    float: left;
+    margin-bottom: 40px;
+    overflow: hidden;
+}
+
+.item_right{
+    padding: 0 20px;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+.dates{
+    overflow: hidden;
+}
+.item_left{
+    width: 180px;
+    float: left;
+}
+.dates{
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+}
+.dates>div{
+    line-height: 30px;
+}
+.dates_left{
+    float: left;
+    font-size: 24px;
+}
+.dates_right{
+    float: right;
+}
+.item_right>p{
+    margin-top: 20px;
+}
+.item_right h2{
+    height: 20px;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+    overflow: hidden;
+}
+.item_right span{
+    display: block;
+    padding-top: 10px;
+    width: 100%;
+    height: 80px;
+    line-height: 20px;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 4;
+    overflow: hidden;
+}
+.item_right a{
+    display: block;
+    width: 35px;
+    height: 30px;
+    float: right;
+    text-align: center;
+    border: 1px solid black;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.jump{
+    overflow: hidden;
+    margin: 10px 0 40px 0;
+}
+.jump_left>a{
+    display: block;
+    float: left;
+    margin-right: 20px;
+}
+.jump_right>a{
+    display: block;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    color: black;
+    text-align: center;
+    line-height: 20px;
+    float: right;
+}
+.jumu_active{
+    background: #c79744;
+    color: white;
+}
 /*news end*/
+
+/*news content sta*/
+.news_tiele{
+    text-align: center;
+    font-size: 20px;
+    overflow: hidden;
+}
+.news_mess{
+    margin-top: 20px;
+}
+.news_mess>div{
+    width: 50%;
+    float: left;
+    padding: 0 20px;
+    box-sizing: border-box;
+    color: #999;
+}
+.news_mess_left{
+    text-align: right;
+}
+.news_mess_right{
+    text-align: left;
+}
+.news_contet{
+    margin-top: 50px;
+    margin-bottom: 20px;
+}
+/*news content end*/
+
+/*action sta*/
+.action{
+    width: 100%;
+    margin: 0 auto;
+    overflow: hidden;
+    padding-bottom: 40px;
+    border-bottom: 1px solid #c79744;
+}
+.action_itmes{
+    width: 100%;
+    overflow: hidden;
+    margin-top: 40px;
+}
+.action_left{
+    width:45%;
+    margin-right: 5%;
+    float: left;
+}
+.action_right{
+    width: 50%;
+    float: right;
+}
+.action_left>div:first-of-type{
+    width: 60px;
+    line-height: 40px;
+    background: #c79744;
+    color: white;
+    text-align: center;
+}
+.action_left>div:nth-of-type(2){
+    margin-top: 50px;
+    line-height: 60px;
+}
+.action_botton{
+    border-top: 2px solid #c79744;
+    margin-top: 30px;
+}
+.action_botton{
+    padding-top: 20px;
+}
+.action_botton>a{
+    display: block;
+    font-size: 14px;
+    line-height: 40px;
+
+}
+.action_botton>a:first-of-type{
+    width: 60%;
+    float: left;
+    color: #999;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+    overflow: hidden;
+}
+.action_botton>a:last-of-type{
+    width: 60px;
+    height: 40px;
+    background: #c79744;
+    float: right;
+    color: white;
+    text-align: center;
+}
+/*action end*/
+
+/*contact sta*/
+.contrac_content{
+    width: 100%;
+    padding-left: 40px;
+    box-sizing: border-box;
+}
+.contact{
+    width: 100%;
+    margin-top: 20px;
+    overflow: hidden;
+}
+.contact_left{
+    width: 55%;
+    float: left;
+}
+.contact_right{
+    width: 40%;
+    float: right;
+}
+.contrac_tiele{
+    border-bottom: 1px solid #999;
+    line-height: 40px;
+}
+.contact_mess{
+    padding-left: 20px;
+    box-sizing: border-box;
+    margin-top: 20px;
+}
+.contact_mess p{
+    line-height: 30px;
+}
+.contact_mess p b{
+    color: #c79744;
+    font-size: 18px;
+}
+.contact_right>a{
+    display: block;
+    float: right;
+    padding: 20px;
+    box-sizing: border-box;
+    font-size: 14px;
+    color: black;
+    position: relative;
+}
+.contact_right span{
+    display: block;
+    text-align: center;
+}
+.contact_right>a:last-of-type{
+    margin-right: 10px;
+    background: #eee;
+    border-radius: 5%;
+}
+.contact_right>a:first-of-type{
+    padding: 30px;
+    border-radius: 5% 5% 0 0;
+    border: 1px solid #999;
+}
+.img_mess{
+    width: 222px;
+    height: 40px;
+    font-size: 14px;
+    line-height: 40px;
+    background: #ccc;
+    position: absolute;
+    left: -1px;
+    bottom: -40px;
+    border-left: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+    border-radius: 0 0 5% 5%;
+}
+.contact_mess>div:first-of-type{
+    width: 60px;
+    text-align: right;
+    float: left;
+}
+.contact_mess>div:last-of-type{
+    /*float: right;*/
+}
+.pro{
+    color: #c79744;
+}
+.pro_active{
+    color: black;
+}
+/*contact end*/
