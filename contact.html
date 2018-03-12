@@ -48,7 +48,7 @@
             <span>您的位置</span>
             <a href="index.html">首页</a>
             >
-            <span>新闻动态</span>
+            <span>联系我们</span>
         </div>
     </div>
     <div class="contrac_content">
@@ -62,7 +62,7 @@
                 </div>
             </div>
             <div class="contact_right">
-                <a href="">
+                <a href="contributions.html">
                     <span><img src="./img/zxjk.png" height="100" alt=""></span>
                     <span class="img_mess">献爱心</span>
                 </a>
@@ -74,27 +74,35 @@
         </div>
         <div class="contact">
             <div class="contact_left">
-                <div class="contrac_tiele">在线留言</div>
-                <div class="contact_mess">
-                    <div>*姓名 :&nbsp;</div>
-                    <input type="text">
-                    <span class="pro">ok</span>
-                </div>
-                <div class="contact_mess">
-                    <div>*手机 :&nbsp;</div>
-                    <input type="text">
-                    <span class="pro">ok</span>
-                </div>
-                <div class="contact_mess">
-                    <div>*邮箱 :&nbsp;</div>
-                    <input type="text">
-                    <span class="pro">ok</span>
-                </div>
-                <div class="contact_mess">
-                    <div>*留言 :&nbsp;</div>
-                    <textarea name="" id="" cols="50" rows="8"></textarea>
-                    <span class="pro">ok</span>
-                </div>
+                <form action="" method="post" onsubmit="return lamess(this)">
+                    <div class="contrac_tiele">在线留言</div>
+                    <div class="contact_mess">
+                        <div>*姓名 :&nbsp;</div>
+                        <input type="text">
+                        <span class="pro">ok</span>
+                    </div>
+                    <div class="contact_mess">
+                        <div>*手机 :&nbsp;</div>
+                        <input type="text">
+                        <span class="pro">ok</span>
+                    </div>
+                    <div class="contact_mess">
+                        <div>*邮箱 :&nbsp;</div>
+                        <input type="text">
+                        <span class="pro">ok</span>
+                    </div>
+                    <div class="contact_mess">
+                        <div>*留言 :&nbsp;</div>
+                        <textarea name="" id="" cols="50" rows="8"></textarea>
+                        <span class="pro">ok</span>
+                    </div>
+                    <input type="submit" class="tijiao" value="提交">
+                </form>
+                <script>
+                    function lamess(obj) {
+//                        return false;
+                    }
+                </script>
             </div>
             <div class="contact_right">
                 <img src="./img/zxjk.png" width="100%" alt="">
@@ -102,6 +110,7 @@
         </div>
     </div>
 </div>
+
 <!--foot sta-->
 <div class="footer">
     <div class="foot">
