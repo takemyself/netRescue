@@ -18,6 +18,7 @@
     </style>
     <script src="./js/jquery.min.js"></script>
     <script src="./js/swiper-4.1.6.min.js"></script>
+    <script type="text/javascript" src="http://api.map.baidu.com/api?v=3.0&ak=Tblqg86sBayjdyilxAxOa1n7vPsXLU7r"></script>
 </head>
 <body>
 <div class="top" style="background-image: url('./img/logo2.png')">
@@ -79,22 +80,22 @@
                     <div class="contact_mess">
                         <div>*姓名 :&nbsp;</div>
                         <input type="text">
-                        <span class="pro">ok</span>
+                        <span class="pro">*</span>
                     </div>
                     <div class="contact_mess">
                         <div>*手机 :&nbsp;</div>
                         <input type="text">
-                        <span class="pro">ok</span>
+                        <span class="pro">*</span>
                     </div>
                     <div class="contact_mess">
                         <div>*邮箱 :&nbsp;</div>
                         <input type="text">
-                        <span class="pro">ok</span>
+                        <span class="pro">*</span>
                     </div>
                     <div class="contact_mess">
                         <div>*留言 :&nbsp;</div>
                         <textarea name="" id="" cols="50" rows="8"></textarea>
-                        <span class="pro">ok</span>
+                        <span class="pro">*</span>
                     </div>
                     <input type="submit" class="tijiao" value="提交">
                 </form>
@@ -105,7 +106,7 @@
                 </script>
             </div>
             <div class="contact_right">
-                <img src="./img/zxjk.png" width="100%" alt="">
+                <div id="container"></div>
             </div>
         </div>
     </div>
@@ -161,4 +162,38 @@
 </div>
 <!--foot end-->
 </body>
+<script>
+    var mp = new BMap.Map("container");
+    mp.centerAndZoom(new BMap.Point(116.3964,39.9093), 10);
+    mp.enableScrollWheelZoom();
+
+    var canvasLayer = new BMap.CanvasLayer({
+        update: update
+    });
+
+    function update() {
+        var ctx = this.canvas.getContext("2d");
+
+        if (!ctx) {
+            return;
+        }
+
+        ctx.clearRect(0, 0, ctx.canvas.width, ctx.canvas.height);
+
+        var temp = {};
+        ctx.fillStyle = "rgba(50, 50, 255, 0.7)";
+        ctx.beginPath();
+        var data = [
+            new BMap.Point(116.297047,39.979542),
+            new BMap.Point(116.321768,39.88748),
+            new BMap.Point(116.494243,39.956539)
+        ];
+
+        for (var i = 0, len = data.length; i < len; i++) {
+            var pixel = mp.pointToPixel(data[i]);
+            ctx.fillRect(pixel.x, pixel.y, 30, 30);
+        }
+    }
+    mp.addOverlay(canvasLayer);
+</script>
 </html>

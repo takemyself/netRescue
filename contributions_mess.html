@@ -22,7 +22,7 @@
 <body>
 <div class="top" style="background-image: url('./img/logo2.png')">
     <div class="nav">
-        <a href="union.html">联盟</a>
+        <a href="index.html">联盟</a>
         <a href="news.html">动态</a>
         <a href="action.html">行动</a>
         <a href="team.html">队伍</a>
@@ -60,7 +60,7 @@
                 <div class="contact_mess">
                     <div>*姓名 :&nbsp;</div>
                     <input type="text">
-                    <span class="pro">ok</span>
+                    <span class="pro">*</span>
                 </div>
                 <div class="contact_mess">
                     <div>*称呼 :&nbsp;</div>
@@ -71,17 +71,17 @@
                 <div class="contact_mess">
                     <div>*手机 :&nbsp;</div>
                     <input type="text">
-                    <span class="pro">ok</span>
+                    <span class="pro">*</span>
                 </div>
                 <div class="contact_mess">
                     <div>*邮箱 :&nbsp;</div>
                     <input type="text">
-                    <span class="pro">ok</span>
+                    <span class="pro">*</span>
                 </div>
                 <div class="contact_mess">
                     <div>*验证码 :&nbsp;</div>
                     <input type="text">
-                    <span class="pro">ok</span>
+                    <span class="pro">*</span>
                 </div>
             </div>
             <div class="contact_right">
@@ -124,20 +124,20 @@
                 <div class="contact_mess">
                     <div>捐款金额</div>
                     <div class="money">
-                        <span>200</span>
-                        <span class="money_active_line">200 <div class="money_active"></div> </span>
-                        <span>200</span>
-                        <span>200</span>
-                        <span>200</span>
-                        <span>200</span>
-                        <span>其他金额</span>
+                        <span class="price">100</span>
+                        <span class="price money_active_line">200 <div class="money_active"></div> </span>
+                        <span class="price">300</span>
+                        <span class="price">400</span>
+                        <span class="price">500</span>
+                        <span class="price">600</span>
+                        <span class="price">其他金额</span>
                     </div>
                 </div>
                 <div class="contact_mess">
                     <div>支付方式</div>
                     <div class="money">
-                        <span>微信</span>
-                        <span>支付宝</span>
+                        <span class="mode">微信</span>
+                        <span class="mode">支付宝</span>
                     </div>
                 </div>
                 <a href="contribution_succ.html"><input type="submit" class="tijiao" value="提交"></a>
@@ -184,7 +184,6 @@
         </div>
     </div>
 </div>
-
 <!--foot sta-->
 <div class="footer">
     <div class="foot">
@@ -235,4 +234,26 @@
 </div>
 <!--foot end-->
 </body>
+<script>
+    $(function () {
+        var $price=$('.price');
+        var str='<div class="money_active"></div>';
+        $price.click(function () {
+            var oall=$price.length-1;
+            var num=$(this).index();
+            if (num<oall){
+                var oldstr=$(this).html();
+                $(this).addClass('money_active_line').siblings().removeClass('money_active_line');
+                $(this).html(oldstr+str).siblings().find('.money_active').removeClass();
+            }else {
+                $(this).parents('.money').html('<div>&nbsp;:&nbsp;<input type="text"></div>');
+            }
+        });
+        $('.mode').click(function () {
+            var oldstr=$(this).html();
+            $(this).addClass('money_active_line').siblings().removeClass('money_active_line');
+            $(this).html(oldstr+str).siblings().find('.money_active').removeClass();
+        });
+    });
+</script>
 </html>

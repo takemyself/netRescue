@@ -391,6 +391,7 @@ img{vertical-align:middle;}
 .item_right span{
     display: block;
     padding-top: 10px;
+    font-size: 14px;
     width: 100%;
     height: 80px;
     line-height: 20px;
